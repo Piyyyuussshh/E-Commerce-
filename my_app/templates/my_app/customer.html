@@ -1,0 +1,45 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}
+customer page 
+{% endblock title %}
+
+{% block content %}
+
+<h1>Customer Page Cached</h1>
+<h3>Customer Info</h3>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for customer in customer  %}
+      <tr>
+        <th scope="row">#</th>
+        <td>{{customer.name}}</td>
+        <td>{{customer.age}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.phone}}</td>
+        <td>{{customer.address}}</td>
+        
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endblock content %}
+
+
+
+
+
+

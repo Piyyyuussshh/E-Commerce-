@@ -1,0 +1,40 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}
+Cart page 
+{% endblock title %}
+
+{% block content %}
+
+<h1>Cart Page</h1>
+<h3>Cart Info</h3>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Products</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Order Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for cart in cart  %}
+      <tr>
+        <th scope="row">#</th>
+        <td>{{cart.customer}}</td>
+        <td>{{cart.products}}</td>
+        <td>{{cart.created_at}}</td>
+        <td>{{cart.order_date}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endblock content %}
+
+
+
+
+
+

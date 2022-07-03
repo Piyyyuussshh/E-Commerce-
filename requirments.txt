@@ -1,0 +1,8 @@
+python
+django
+djangorestframework
+mysqlclient
+django-phonenumber-field
+django-money
+drf_yasg
+django-materializecss-form

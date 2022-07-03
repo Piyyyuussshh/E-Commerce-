@@ -1,0 +1,184 @@
+swagger: '2.0'
+info:
+  title: E-Commerce API
+  description: Test description
+  termsOfService: https://www.google.com/policies/terms/
+  contact:
+    email: contact@snippets.local
+  license:
+    name: BSD License
+  version: v1
+host: localhost:8000
+schemes:
+  - http
+basePath: /api/v1
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /cart/:
+    get:
+      operationId: cart_list
+      description: List all cart, or create a cart.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - cart
+    post:
+      operationId: cart_create
+      description: List all cart, or create a cart.
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - cart
+    parameters: []
+  /cart/{id}/:
+    get:
+      operationId: cart_read
+      description: Retrieve, update or delete a product.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - cart
+    put:
+      operationId: cart_update
+      description: Retrieve, update or delete a product.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - cart
+    delete:
+      operationId: cart_delete
+      description: Retrieve, update or delete a product.
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - cart
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /customer/:
+    get:
+      operationId: customer_list
+      description: List all code customers, or create a new customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - customer
+    post:
+      operationId: customer_create
+      description: List all code customers, or create a new customer.
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - customer
+    parameters: []
+  /customer/{id}/:
+    get:
+      operationId: customer_read
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - customer
+    put:
+      operationId: customer_update
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - customer
+    delete:
+      operationId: customer_delete
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - customer
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /product/:
+    get:
+      operationId: product_list
+      description: List all code customers, or create a new customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - product
+    post:
+      operationId: product_create
+      description: List all code customers, or create a new customer.
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - product
+    parameters: []
+  /product/{id}/:
+    get:
+      operationId: product_read
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - product
+    put:
+      operationId: product_update
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - product
+    delete:
+      operationId: product_delete
+      description: Retrieve, update or delete a customer.
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - product
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+definitions: {}

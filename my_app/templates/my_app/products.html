@@ -1,0 +1,38 @@
+{% extends 'my_app/base.html' %}
+
+{% block title %}
+product page 
+{% endblock title %}
+
+{% block content %}
+
+<h1>Product Page Cached</h1>
+<h3>Product Info</h3>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for product in product  %}
+      <tr>
+        <th scope="row">#</th>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endblock content %}
+
+
+
+
+
+
